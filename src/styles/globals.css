@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette - Warm, Intimate, Sophisticated */
+  --color-sand-50: #faf8f5;
+  --color-sand-100: #f5f1ea;
+  --color-sand-200: #ebe4d8;
+  --color-sand-300: #ddd2c1;
+  --color-sand-400: #c9b8a3;
+  --color-sand-500: #b5a08a;
+  --color-sand-600: #9d8a74;
+  --color-sand-700: #7d6d5c;
+  --color-sand-800: #5e5246;
+  --color-sand-900: #3f3730;
+
+  --color-taupe-50: #f7f6f4;
+  --color-taupe-100: #eceae6;
+  --color-taupe-200: #dbd7d0;
+  --color-taupe-300: #c4bdb3;
+  --color-taupe-400: #a8a095;
+  --color-taupe-500: #8e8578;
+  --color-taupe-600: #76695f;
+  --color-taupe-700: #5d544c;
+  --color-taupe-800: #463f39;
+  --color-taupe-900: #2f2a26;
+
+  --color-rose-50: #faf6f7;
+  --color-rose-100: #f4eaed;
+  --color-rose-200: #e8d5db;
+  --color-rose-300: #d4b3bd;
+  --color-rose-400: #b98d9a;
+  --color-rose-500: #9e6f7d;
+  --color-rose-600: #825a65;
+  --color-rose-700: #66474f;
+  --color-rose-800: #4d353b;
+  --color-rose-900: #332327;
+
+  --color-sage-50: #f5f8f6;
+  --color-sage-100: #e8f0eb;
+  --color-sage-200: #d1e1d7;
+  --color-sage-300: #a8c4b3;
+  --color-sage-400: #7fa28f;
+  --color-sage-500: #5d8470;
+  --color-sage-600: #4a6b5a;
+  --color-sage-700: #3a5447;
+  --color-sage-800: #2b3f35;
+  --color-sage-900: #1d2a23;
+
+  --color-ink-50: #f4f6f8;
+  --color-ink-100: #e6ebf0;
+  --color-ink-200: #c8d5e0;
+  --color-ink-300: #9db4c8;
+  --color-ink-400: #6b8aa5;
+  --color-ink-500: #4a6b88;
+  --color-ink-600: #3a5569;
+  --color-ink-700: #2d424f;
+  --color-ink-800: #21303a;
+  --color-ink-900: #162027;
+
+  --color-forest-50: #f4f7f5;
+  --color-forest-100: #e6ede8;
+  --color-forest-200: #c8d9cd;
+  --color-forest-300: #9db9a8;
+  --color-forest-400: #6d9479;
+  --color-forest-500: #4a7357;
+  --color-forest-600: #3a5b45;
+  --color-forest-700: #2d4736;
+  --color-forest-800: #213428;
+  --color-forest-900: #16231b;
+
+  --color-aubergine-50: #f7f5f7;
+  --color-aubergine-100: #ede8ed;
+  --color-aubergine-200: #d9d0d9;
+  --color-aubergine-300: #b8a8b8;
+  --color-aubergine-400: #927d92;
+  --color-aubergine-500: #6f5b6f;
+  --color-aubergine-600: #564756;
+  --color-aubergine-700: #433743;
+  --color-aubergine-800: #322932;
+  --color-aubergine-900: #211b21;
+
+  /* Spacing for calm, breathable layouts */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Shadows - soft and subtle */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.06), 0 10px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Typography - Refined and Breathable */
+* {
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Force Tailwind to generate avatar color classes */
+.safelist-colors {
+  @apply bg-sage-300 bg-sage-400 bg-ink-300 bg-ink-400;
+  @apply bg-rose-300 bg-rose-400 bg-aubergine-300 bg-aubergine-400;
+  @apply bg-forest-400 bg-taupe-400;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: theme('colors.taupe.700');
+  background-color: theme('colors.sand.50');
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: theme('colors.ink.700');
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.875rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* Smooth transitions globally */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Selection color */
+::selection {
+  background-color: theme('colors.rose.200');
+  color: theme('colors.ink.700');
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.sand.100');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.taupe.300');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.taupe.400');
+}
+
+/* Subtle texture overlay */
+.paper-texture {
+  position: relative;
+}
+
+.paper-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
