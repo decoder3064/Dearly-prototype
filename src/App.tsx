@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
+import { WelcomePage } from './components/WelcomePage';
 import { Dashboard } from './components/Dashboard';
 import { CreateLetter } from './components/CreateLetter';
 import { CreateGroupLetter } from './components/CreateGroupLetter';
@@ -14,10 +15,10 @@ import { PendingArrivals } from './components/PendingArrivals';
 import { TrackingDetails } from './components/TrackingDetails';
 import { Settings as SettingsIcon } from 'lucide-react';
 
-type View = 'dashboard' | 'create' | 'createGroup' | 'transit' | 'reveal' | 'settings' | 'tracking' | 'newGroup' | 'addFriend' | 'groupView' | 'correspondentView';
+type View = 'welcome' | 'dashboard' | 'create' | 'createGroup' | 'transit' | 'reveal' | 'settings' | 'tracking' | 'newGroup' | 'addFriend' | 'groupView' | 'correspondentView';
 
 function App() {
-  const [currentView, setCurrentView] = useState<View>('dashboard');
+  const [currentView, setCurrentView] = useState<View>('welcome');
   const [showSettings, setShowSettings] = useState(false);
   const [selectedLetter, setSelectedLetter] = useState<any>(null);
   const [selectedTrackingId, setSelectedTrackingId] = useState<string | null>(null);
@@ -278,6 +279,15 @@ Casey`,
     setSelectedTrackingId(null);
     setSelectedCorrespondent(null);
   };
+
+  // Show Welcome Page first
+  if (currentView === 'welcome') {
+    return (
+      <AnimatePresence mode="wait">
+        <WelcomePage onStart={() => setCurrentView('dashboard')} />
+      </AnimatePresence>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-sand-50">
