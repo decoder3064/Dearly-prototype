@@ -22,17 +22,17 @@ interface Group {
 
 const mockGroups: Group[] = [
   {
-    id: 'book-club',
-    name: 'Book Club',
-    description: 'Monthly reflections on our readings',
+    id: 'hci-project',
+    name: 'HCI Project',
+    description: 'Team collaboration and project updates',
     members: [
-      { name: 'Maya', avatarColor: 'bg-sage-300' },
-      { name: 'Alex', avatarColor: 'bg-ink-300' },
-      { name: 'Jordan', avatarColor: 'bg-rose-300' }
+      { name: 'David', avatarColor: 'bg-sage-300' },
+      { name: 'Danny', avatarColor: 'bg-ink-300' },
+      { name: 'Yabesi', avatarColor: 'bg-rose-300' }
     ],
     latestLetter: {
-      from: 'Maya',
-      preview: 'Just finished the latest chapter and had so many thoughts about the protagonist\'s journey...',
+      from: 'David',
+      preview: 'Amazing news team - we got a 100 on the project! I just got the grade back from the professor...',
       date: '2 days ago'
     },
     unreadCount: 2,

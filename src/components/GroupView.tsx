@@ -19,35 +19,41 @@ const mockGroupLetters: Record<string, {
     preview: string;
     content: string;
     avatarColor: string;
+    image?: string;
   }[];
 }> = {
-  'book-club': {
-    name: 'Book Club',
-    description: 'Monthly discussions about our favorite reads',
+  'hci-project': {
+    name: 'HCI Project',
+    description: 'Team collaboration and project updates',
     members: [
-      { name: 'Maya', avatarColor: 'bg-sage-300', initial: 'M' },
-      { name: 'Jordan', avatarColor: 'bg-rose-300', initial: 'J' },
-      { name: 'Alex', avatarColor: 'bg-ink-300', initial: 'A' },
+      { name: 'David', avatarColor: 'bg-sage-300', initial: 'D' },
+      { name: 'Danny', avatarColor: 'bg-rose-300', initial: 'D' },
+      { name: 'Yabesi', avatarColor: 'bg-ink-300', initial: 'Y' },
     ],
     letters: [
       {
-        id: 'book-club-1',
-        from: 'Maya',
-        date: 'November 20, 2025',
-        preview: 'Just finished "The Overstory" and I am still thinking about it...',
-        content: `Dear Book Club,
+        id: 'hci-project-1',
+        from: 'David',
+        date: 'December 8, 2025',
+        preview: 'Amazing news team - we got a 100 on the project!',
+        content: `Hey team,
 
-Just finished "The Overstory" and I'm still thinking about it days later. The way Richard Powers weaves together all those stories about trees and the people who love them - it's changed how I look at the world around me.
+Amazing news - we got a 100 on the project! 🎉
 
-I found myself walking through the park yesterday, really seeing the trees for the first time. Did you know some of the oaks there are over 200 years old? They've witnessed so much history, silently growing while generations came and went.
+I just got the grade back from the professor and they were incredibly impressed with our work. All those late nights and thoughtful iterations really paid off. The feedback highlighted our attention to detail in the user experience and how well we collaborated as a team.
 
-The chapter about Mimi's father and the mulberry tree made me cry. That connection between memory, place, and nature felt so real. I keep thinking about what we leave behind, what stories our own trees might tell.
+I'm so proud of what we built together. Danny, your audio design really elevated the whole experience. Yabesi, your user research insights were absolutely crucial in shaping our direction. And honestly, this wouldn't have been possible without everyone's dedication and creativity.
 
-Can't wait to discuss this with you all at our next meeting. I have so many questions about the ending.
+Here's a screenshot of our final prototype that the professor specifically praised:
 
-With love and leaves,
-Maya`,
-        avatarColor: 'bg-sage-300'
+Thanks for being such an incredible team to work with. This is definitely a project I'll remember for years to come.
+
+Cheers to us! 🥂
+
+Best,
+David`,
+        avatarColor: 'bg-sage-300',
+        image: '/imgs/IMG_1950.jpg'
       }
     ]
   },
@@ -261,6 +267,15 @@ export function GroupView({ onClose, groupId }: GroupViewProps) {
                   <p className="whitespace-pre-wrap text-ink-600 leading-relaxed">
                     {selectedLetterData.content}
                   </p>
+                  {selectedLetterData.image && (
+                    <div className="mt-6">
+                      <img 
+                        src={selectedLetterData.image} 
+                        alt="Attached image" 
+                        className="w-full rounded-lg shadow-md"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

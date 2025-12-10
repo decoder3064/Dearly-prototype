@@ -252,7 +252,7 @@ export function WelcomePage({ onStart }: WelcomePageProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.0, duration: 0.8 }}
         >
-          Rediscover the art of meaningful connection through thoughtful, unhurried letters.
+          Where anticipation meets connection—savor the journey of thoughtful, unhurried letters.
         </motion.p>
 
         {/* Start Button */}
