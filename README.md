@@ -59,8 +59,6 @@ npm run dev
 
 Then open `http://localhost:5173` in your browser.
 
-The original Figma design is available at: https://www.figma.com/design/ecCTkXvBQkRDGLs3rUGnG4/Design-Slow-Tech-Letter-App
-
 ---
 
 ## Project Context
