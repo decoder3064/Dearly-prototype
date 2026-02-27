@@ -8,7 +8,7 @@ Dearly is a **slow-tech letter app** — a deliberate counter to the instant-mes
 
 The core philosophy is that the **wait is the feature**. Anticipation deepens connection. Choosing your words carefully — knowing they won't arrive instantly — encourages more meaningful communication.
 
-This project is an HCI (Human-Computer Interaction) design prototype built as a React + TypeScript web app, originally designed in Figma.
+This project is an HCI (Human-Computer Interaction) design prototype built as a React + TypeScript web app, originally designed in Figma, and then implemented by myself.
 
 ---
 
