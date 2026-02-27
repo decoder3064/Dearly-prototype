@@ -60,7 +60,3 @@ npm run dev
 Then open `http://localhost:5173` in your browser.
 
 ---
-
-## Project Context
-
-This is a design prototype created as part of an HCI project exploring slow technology and intentional digital communication. The app uses mock data throughout — no backend or real mail delivery exists. The focus is entirely on the UX and interaction design of a slow-correspondence experience.
